@@ -6,6 +6,7 @@ import type {
 } from "aws-lambda";
 import "#internal/nitro/virtual/polyfill";
 import { nitroApp } from "../app";
+import { normalizeLambdaOutgoingBody } from "../utils.lambda";
 
 export const handler = async function handler(
   event: CloudFrontRequestEvent,
@@ -27,7 +28,7 @@ export const handler = async function handler(
   return {
     status: r.status.toString(),
     headers: normalizeOutgoingHeaders(r.headers),
-    body: r.body.toString(),
+    body: (await normalizeLambdaOutgoingBody(r.body, r.headers)).body,
   };
 };
 
