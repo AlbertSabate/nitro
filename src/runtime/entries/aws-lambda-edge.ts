@@ -44,6 +44,7 @@ function normalizeBody(
     bodyString.data = Buffer.from(body.data, "base64").toString("utf8");
     bodyString.data = decodeURIComponent(bodyString.data);
   }
+
   return bodyString;
 }
 
