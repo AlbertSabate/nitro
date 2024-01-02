@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { defineCommand, runMain } from 'citty';
-import { n as nitroPkg } from '../shared/nitro.fbb67b25.mjs';
+import { n as nitroPkg } from '../shared/nitro.d838b984.mjs';
 
 const main = defineCommand({
   meta: {

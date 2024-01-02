@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import { toRouteMatcher, createRouter } from 'radix3';
 import { defu } from 'defu';
 import mime from 'mime';
-import { a as createNitro, b as build, i as compressPublicAssets, j as writeFile } from './nitro.9fc4b4e9.mjs';
+import { a as createNitro, b as build, i as compressPublicAssets, j as writeFile } from './nitro.5f85b597.mjs';
 
 const allowedExtensions = /* @__PURE__ */ new Set(["", ".json"]);
 const JsonSigRx = /^\s*["[{]|^\s*-?\d{1,16}(\.\d{1,17})?([Ee][+-]?\d+)?\s*$/;

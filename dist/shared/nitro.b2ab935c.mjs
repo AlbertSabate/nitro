@@ -10,7 +10,7 @@ import serveStatic from 'serve-static';
 import { resolve } from 'pathe';
 import { joinURL } from 'ufo';
 import { watch } from 'chokidar';
-import { v as version } from './nitro.fbb67b25.mjs';
+import { v as version } from './nitro.d838b984.mjs';
 
 function createVFSHandler(nitro) {
   return eventHandler(async (event) => {

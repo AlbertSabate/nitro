@@ -9,7 +9,7 @@ import { genSafeVariableName, genImport, genTypeImport } from 'knitwork';
 import { debounce } from 'perfect-debounce';
 import { globby } from 'globby';
 import { isValidNodeImport, normalizeid, parseNodeModulePath as parseNodeModulePath$1, lookupNodeModuleSubpath, resolvePath as resolvePath$1, sanitizeFilePath, findStaticImports, resolveModuleExportNames } from 'mlly';
-import { n as nitroPkg, v as version } from './nitro.fbb67b25.mjs';
+import { n as nitroPkg, v as version } from './nitro.d838b984.mjs';
 import prettyBytes from 'pretty-bytes';
 import { gzipSize } from 'gzip-size';
 import chalk from 'chalk';

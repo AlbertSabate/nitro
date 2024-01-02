@@ -10,7 +10,6 @@ export const handler = async function handler2(event, context) {
     context,
     headers: normalizeIncomingHeaders(request.headers),
     method: request.method,
-    query: request.querystring,
     body: normalizeBody(request.body)
   });
   return {
@@ -21,31 +20,23 @@ export const handler = async function handler2(event, context) {
 };
 function normalizeBody(body) {
   if (body === void 0) {
-    return body;
+    return void 0;
   }
-  const bodyString = body;
-  if (body.encoding !== void 0 && body.encoding === "base64") {
-    bodyString.data = Buffer.from(body.data, "base64").toString("utf8");
-    bodyString.data = decodeURIComponent(bodyString.data);
-  }
-  return bodyString;
+  return body.encoding === "base64" ? decodeURIComponent(Buffer.from(body.data, "base64").toString("utf8")) : body.data;
 }
 function normalizeIncomingHeaders(headers) {
   return Object.fromEntries(
     Object.entries(headers).map(([key, keyValues]) => [
       key,
-      keyValues.map((kv) => kv.value)
+      keyValues.map(({ value }) => value)
     ])
   );
 }
 function normalizeOutgoingHeaders(headers) {
-  const entries = Object.fromEntries(
-    Object.entries(headers).filter(([key]) => !["content-length"].includes(key))
-  );
   return Object.fromEntries(
-    Object.entries(entries).map(([k, v]) => [
-      k,
-      Array.isArray(v) ? v.map((value) => ({ value })) : [{ value: v.toString() }]
+    Object.entries(headers).filter(([key]) => !["content-length"].includes(key)).map(([key, v]) => [
+      key,
+      Array.isArray(v) ? v.map((value) => ({ key, value })) : [{ key, value: v.toString() }]
     ])
   );
 }

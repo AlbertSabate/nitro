@@ -45,7 +45,6 @@ const scripts = {
 	lint: "eslint --cache --ext .ts,.mjs,.cjs . && prettier -c src test",
 	"lint:fix": "eslint --cache --fix --ext .ts,.mjs,.cjs . && prettier --write -c src test",
 	nitro: "JITI_ESM_RESOLVE=1 NODE_OPTIONS=\"--enable-source-maps\" jiti ./src/cli/index.ts",
-	prepack: "pnpm build",
 	release: "pnpm test && pnpm build && changelogen --release && pnpm publish && git push --follow-tags",
 	stub: "unbuild --stub",
 	test: "pnpm lint && pnpm vitest-es run --silent",
