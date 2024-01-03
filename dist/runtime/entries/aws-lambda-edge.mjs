@@ -28,7 +28,7 @@ function normalizeIncomingHeaders(headers) {
   return Object.fromEntries(
     Object.entries(headers).map(([key, keyValues]) => [
       key,
-      keyValues.map(({ value }) => value)
+      keyValues.map(({ value }) => value).pop()
     ])
   );
 }
