@@ -14,7 +14,6 @@ export const handler = async function handler2(event, context) {
   });
   const outgoingHeaders = normalizeOutgoingHeaders(r.headers);
   const outgoingBody = (await normalizeLambdaOutgoingBody(r.body, r.headers)).body;
-  console.dir(outgoingHeaders, { depth: null });
   return {
     status: r.status.toString(),
     headers: outgoingHeaders,
@@ -29,10 +28,12 @@ function normalizeBody(body) {
 }
 function normalizeIncomingHeaders(headers) {
   return Object.fromEntries(
-    Object.entries(headers).map(([key, keyValues]) => [
-      key,
-      keyValues.map(({ value }) => value).pop()
-    ])
+    Object.entries(headers).map(([key, keyValues]) => {
+      if (keyValues.length > 1) {
+        return [key, keyValues.map(({ value }) => value)];
+      }
+      return [key, keyValues.map(({ value }) => value)[0]];
+    })
   );
 }
 function normalizeOutgoingHeaders(headers) {
