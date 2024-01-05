@@ -24,10 +24,16 @@ export const handler = async function handler(
     body: normalizeBody(request.body),
   });
 
+  const outgoingHeaders = normalizeOutgoingHeaders(r.headers);
+  const outgoingBody = (await normalizeLambdaOutgoingBody(r.body, r.headers))
+    .body;
+
+  console.dir(outgoingHeaders, { depth: null });
+
   return {
     status: r.status.toString(),
-    headers: normalizeOutgoingHeaders(r.headers),
-    body: (await normalizeLambdaOutgoingBody(r.body, r.headers)).body,
+    headers: outgoingHeaders,
+    body: outgoingBody,
   };
 };
 
