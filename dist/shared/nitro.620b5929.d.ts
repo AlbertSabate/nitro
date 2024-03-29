@@ -421,6 +421,8 @@ declare const awsAmplify: NitroPreset;
 
 declare const awsLambda: undefined;
 
+declare const awsLambdaEdge: undefined;
+
 declare const azureFunctions: NitroPreset;
 
 declare const azure: NitroPreset;
@@ -499,6 +501,7 @@ declare const zeaburStatic: NitroPreset;
 declare const _PRESETS_alwaysdata: typeof alwaysdata;
 declare const _PRESETS_awsAmplify: typeof awsAmplify;
 declare const _PRESETS_awsLambda: typeof awsLambda;
+declare const _PRESETS_awsLambdaEdge: typeof awsLambdaEdge;
 declare const _PRESETS_azure: typeof azure;
 declare const _PRESETS_azureFunctions: typeof azureFunctions;
 declare const _PRESETS_baseWorker: typeof baseWorker;
@@ -542,7 +545,7 @@ declare const _PRESETS_winterjs: typeof winterjs;
 declare const _PRESETS_zeabur: typeof zeabur;
 declare const _PRESETS_zeaburStatic: typeof zeaburStatic;
 declare namespace _PRESETS {
-  export { _PRESETS_alwaysdata as alwaysdata, _PRESETS_awsAmplify as awsAmplify, _PRESETS_awsLambda as awsLambda, _PRESETS_azure as azure, _PRESETS_azureFunctions as azureFunctions, _PRESETS_baseWorker as baseWorker, _PRESETS_bun as bun, _PRESETS_cleavr as cleavr, _PRESETS_cli as cli, _PRESETS_cloudflare as cloudflare, _PRESETS_cloudflareModule as cloudflareModule, _PRESETS_cloudflarePages as cloudflarePages, _PRESETS_cloudflarePagesStatic as cloudflarePagesStatic, _PRESETS_deno as deno, _PRESETS_denoDeploy as denoDeploy, _PRESETS_denoServer as denoServer, _PRESETS_digitalOcean as digitalOcean, _PRESETS_edgio as edgio, _PRESETS_firebase as firebase, _PRESETS_flightControl as flightControl, _PRESETS_githubPages as githubPages, _PRESETS_heroku as heroku, _PRESETS_iis as iis, _PRESETS_iisHandler as iisHandler, _PRESETS_iisNode as iisNode, _PRESETS_koyeb as koyeb, edgio as layer0, _PRESETS_netlify as netlify, _PRESETS_netlifyBuilder as netlifyBuilder, _PRESETS_netlifyEdge as netlifyEdge, _PRESETS_netlifyStatic as netlifyStatic, _PRESETS_nitroDev as nitroDev, _PRESETS_nitroPrerender as nitroPrerender, _PRESETS_node as node, _PRESETS_nodeCluster as nodeCluster, _PRESETS_nodeServer as nodeServer, _PRESETS_platformSh as platformSh, _PRESETS_renderCom as renderCom, _PRESETS_serviceWorker as serviceWorker, _static as static, _PRESETS_stormkit as stormkit, _PRESETS_vercel as vercel, _PRESETS_vercelEdge as vercelEdge, _PRESETS_vercelStatic as vercelStatic, _PRESETS_winterjs as winterjs, _PRESETS_zeabur as zeabur, _PRESETS_zeaburStatic as zeaburStatic };
+  export { _PRESETS_alwaysdata as alwaysdata, _PRESETS_awsAmplify as awsAmplify, _PRESETS_awsLambda as awsLambda, _PRESETS_awsLambdaEdge as awsLambdaEdge, _PRESETS_azure as azure, _PRESETS_azureFunctions as azureFunctions, _PRESETS_baseWorker as baseWorker, _PRESETS_bun as bun, _PRESETS_cleavr as cleavr, _PRESETS_cli as cli, _PRESETS_cloudflare as cloudflare, _PRESETS_cloudflareModule as cloudflareModule, _PRESETS_cloudflarePages as cloudflarePages, _PRESETS_cloudflarePagesStatic as cloudflarePagesStatic, _PRESETS_deno as deno, _PRESETS_denoDeploy as denoDeploy, _PRESETS_denoServer as denoServer, _PRESETS_digitalOcean as digitalOcean, _PRESETS_edgio as edgio, _PRESETS_firebase as firebase, _PRESETS_flightControl as flightControl, _PRESETS_githubPages as githubPages, _PRESETS_heroku as heroku, _PRESETS_iis as iis, _PRESETS_iisHandler as iisHandler, _PRESETS_iisNode as iisNode, _PRESETS_koyeb as koyeb, edgio as layer0, _PRESETS_netlify as netlify, _PRESETS_netlifyBuilder as netlifyBuilder, _PRESETS_netlifyEdge as netlifyEdge, _PRESETS_netlifyStatic as netlifyStatic, _PRESETS_nitroDev as nitroDev, _PRESETS_nitroPrerender as nitroPrerender, _PRESETS_node as node, _PRESETS_nodeCluster as nodeCluster, _PRESETS_nodeServer as nodeServer, _PRESETS_platformSh as platformSh, _PRESETS_renderCom as renderCom, _PRESETS_serviceWorker as serviceWorker, _static as static, _PRESETS_stormkit as stormkit, _PRESETS_vercel as vercel, _PRESETS_vercelEdge as vercelEdge, _PRESETS_vercelStatic as vercelStatic, _PRESETS_winterjs as winterjs, _PRESETS_zeabur as zeabur, _PRESETS_zeaburStatic as zeaburStatic };
 }
 
 interface NitroEventHandler {

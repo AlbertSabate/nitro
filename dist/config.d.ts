@@ -1,4 +1,4 @@
-import { N as NitroConfig } from './shared/nitro.e5946828.js';
+import { N as NitroConfig } from './shared/nitro.620b5929.js';
 import 'unenv';
 import 'unimport';
 import 'unimport/unplugin';

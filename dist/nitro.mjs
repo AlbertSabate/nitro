@@ -2853,6 +2853,10 @@ const awsLambda = defineNitroPreset({
   entry: "#internal/nitro/entries/aws-lambda"
 });
 
+const awsLambdaEdge = defineNitroPreset({
+  entry: "#internal/nitro/entries/aws-lambda-edge"
+});
+
 const azureFunctions = defineNitroPreset({
   serveStatic: true,
   entry: "#internal/nitro/entries/azure-functions",
@@ -4529,6 +4533,7 @@ const _PRESETS = {
   alwaysdata: alwaysdata,
   awsAmplify: awsAmplify,
   awsLambda: awsLambda,
+  awsLambdaEdge: awsLambdaEdge,
   azure: azure,
   azureFunctions: azureFunctions,
   baseWorker: baseWorker,
